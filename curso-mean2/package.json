@@ -1,0 +1,26 @@
+{
+  "name": "curso-mean2",
+  "version": "1.0.0",
+  "description": "proyecto de API REST con NodeJS para curso Udemy",
+  "main": "index.js",
+  "scripts": {
+  	"start": "nodemon index.js", 
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "\u001b[F\u001b[B\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[CFrancisco A Corrales C",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.18.3",
+    "connect-multiparty": "^2.2.0",
+    "express": "^4.16.4",
+    "jwt-simple": "^0.5.5",
+    "moment": "^2.24.0",
+    "mongoose": "^5.4.10",
+    "mongoose-pagination": "^1.0.0",
+    "save": "^2.3.3"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.9"
+  }
+}

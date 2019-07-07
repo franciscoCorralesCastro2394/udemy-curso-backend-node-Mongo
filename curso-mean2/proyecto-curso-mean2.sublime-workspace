@@ -1,0 +1,430 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"al",
+				"albumRemoved"
+			],
+			[
+				"ar",
+				"artist"
+			],
+			[
+				"a",
+				"artistsRemoved"
+			],
+			[
+				"art",
+				"artistsId"
+			],
+			[
+				"at",
+				"artistsUpdate"
+			],
+			[
+				"fi",
+				"findById"
+			],
+			[
+				"i",
+				"itemsPerPage"
+			],
+			[
+				"mo",
+				"mongoosePaginate"
+			],
+			[
+				"re",
+				"require"
+			],
+			[
+				"p",
+				"page"
+			],
+			[
+				"Ar",
+				"Artist"
+			],
+			[
+				"as",
+				"artist"
+			],
+			[
+				"A",
+				"Artist"
+			],
+			[
+				"md",
+				"md_auth"
+			],
+			[
+				"S",
+				"String"
+			],
+			[
+				"pa",
+				"pathFile"
+			],
+			[
+				"ima",
+				"imageFile"
+			],
+			[
+				"sen",
+				"send"
+			],
+			[
+				"s",
+				"status"
+			],
+			[
+				"req",
+				"require"
+			],
+			[
+				"us",
+				"userUpdated"
+			],
+			[
+				"el",
+				"else"
+			],
+			[
+				"user",
+				"userUpdated"
+			],
+			[
+				"fil",
+				"file_name"
+			],
+			[
+				"fin",
+				"findByIdAndUpdate"
+			],
+			[
+				"use",
+				"User"
+			],
+			[
+				"file",
+				"file_ext"
+			],
+			[
+				"file_",
+				"file_path"
+			],
+			[
+				"con",
+				"console"
+			],
+			[
+				"u",
+				"UserControler"
+			],
+			[
+				"b",
+				"body"
+			],
+			[
+				"c",
+				"check"
+			],
+			[
+				"se",
+				"send"
+			],
+			[
+				"e",
+				"email"
+			],
+			[
+				"m",
+				"message"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"pr",
+				"prueba"
+			],
+			[
+				"User",
+				"UserSchema"
+			],
+			[
+				"co",
+				"console"
+			],
+			[
+				"t",
+				"throw"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "controlers/artist.js",
+			"settings":
+			{
+				"buffer_size": 3529,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "routes/artist.js",
+			"settings":
+			{
+				"buffer_size": 585,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/nodeProyect/curso-mean2",
+		"/C/nodeProyect/curso-mean2/controlers",
+		"/C/nodeProyect/curso-mean2/routes"
+	],
+	"file_history":
+	[
+		"/C/nodeProyect/curso-mean2/controlers/artist.js",
+		"/C/nodeProyect/curso-mean2/controlers/user.js",
+		"/C/nodeProyect/curso-mean2/index.js",
+		"/C/nodeProyect/curso-mean2/models/artist.js",
+		"/C/nodeProyect/curso-mean2/routes/artist.js",
+		"/C/nodeProyect/curso-mean2/models/albun.js",
+		"/C/nodeProyect/curso-mean2/routes/user.js",
+		"/C/nodeProyect/curso-mean2/services/jwt.js",
+		"/C/nodeProyect/curso-mean2/middlewar/authenticated.js",
+		"/C/nodeProyect/curso-mean2/app.js",
+		"/C/nodeProyect/curso-mean2/models/song.js",
+		"/C/nodeProyect/curso-mean2/uploads/users.js",
+		"/C/nodeProyect/curso-mean2/middlewar/authenticated",
+		"/C/Users/francisco.corrales/Desktop/landing-page.html",
+		"/C/nodeProyect/curso-mean2/package.json",
+		"/C/nodeProyect/curso-mean2/models/user.js"
+	],
+	"find":
+	{
+		"height": 27.0
+	},
+	"find_in_files":
+	{
+		"height": 104.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"){\n",
+			"{\n",
+			"\nfunction deleteArtist(req,res){\nvar artistsId = req.params.id;\n\nArtist.findByIdAndRemove(artistsId, (err,artistsRemoved) => {\n  \n  if(err){\n    res.status(500).send({message:'Error al remover el artista'});\n  }else{\n      if(!artistsRemoved){\n        res.status(404).send({message:'El artista no ha sido removido'});\n      }else{\n        res.status(404).send({artistsRemoved});\n\n        Album.find({artist: artistsRemoved,_id}).remove((err , albumRemoved)=>{\n            if(err){\n              res.status(500).send({message:'El album ha sido eliminado'});\n                }else{\n                  if(!albumRemoved){\n                    res.status(404).send({message:'El albun no sa ha podido eliminar'});\n                  }else{\n                     res.status(404).send({albumRemoved});\n                        Song.find({artist: albumRemoved,_id}).remove((err , songRemoved)=>{\n            if(err){\n              res.status(500).send({message:'El album ha sido eliminado'});\n                }else{\n                  if(!songRemoved){\n                    res.status(404).send({message:'El albun no sa ha podido eliminar'});\n                  }else{\n                     res.status(404).send({songRemoved});\n                  }\n                }\n            });\n                  }\n                }\n            });\n      }\n  }\n});\n}",
+			"f",
+			"function deleteArtist(req,res){\nvar artistsId = req.params.id;\n\nArtist.findByIdAndRemove(artistsId, (err,artistsRemoved) => {\n  \n  if(err){\n    res.status(500).send({message:'Error al remover el artista'});\n  }else{\n      if(!artistsRemoved){\n        res.status(404).send({message:'El artista no ha sido removido'});\n      }else{\n        res.status(404).send({artistsRemoved});\n\n        Album.find({artist: artistsRemoved,_id}).remove((err , albumRemoved)=>{\n            if(err){\n              res.status(500).send({message:'El album ha sido eliminado'});\n                }else{\n                  if(!albumRemoved){\n                    res.status(404).send({message:'El albun no sa ha podido eliminar'});\n                  }else{\n                     res.status(404).send({albumRemoved});\n                        Song.find({artist: albumRemoved,_id}).remove((err , songRemoved)=>{\n            if(err){\n              res.status(500).send({message:'El album ha sido eliminado'});\n                }else{\n                  if(!songRemoved){\n                    res.status(404).send({message:'El albun no sa ha podido eliminar'});\n                  }else{\n                     res.status(404).send({songRemoved});\n\n\n                  }\n                }\n            });\n\n                  }\n                }\n            });\n      }\n\n  }\n\n\n});\n}",
+			"\nArtist.findByIdAndRemove(artistsId, (err,artistsRemoved) => {\n  \n  if(err){\n    res.status(500).send({message:'Error al remover el artista'});\n  }else{\n      if(!artistsRemoved){\n        res.status(404).send({message:'El artista no ha sido removido'});\n      }else{\n        res.status(404).send({artistsRemoved});\n\n        Album.find({artist: artistsRemoved,_id}).remove((err , albumRemoved)=>{\n            if(err){\n              res.status(500).send({message:'El album ha sido eliminado'});\n                }else{\n                  if(!albumRemoved){\n                    res.status(404).send({message:'El albun no sa ha podido eliminar'});\n                  }else{\n                     res.status(404).send({albumRemoved});\n                        Song.find({artist: albumRemoved,_id}).remove((err , songRemoved)=>{\n            if(err){\n              res.status(500).send({message:'El album ha sido eliminado'});\n                }else{\n                  if(!songRemoved){\n                    res.status(404).send({message:'El albun no sa ha podido eliminar'});\n                  }else{\n                     res.status(404).send({songRemoved});\n\n\n                  }\n                }\n            });\n\n                  }\n                }\n            });\n      }\n\n  }",
+			"artistsUpdate"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "controlers/artist.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3529,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2968,
+								2968
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1962.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "routes/artist.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 585,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								505,
+								505
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 39.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "proyecto-curso-mean2.sublime-project",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 248.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
